@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Noto+Sans+Devanagari:wght@400;600;700&family=Noto+Sans+Kannada:wght@400;600;700&display=swap" rel="stylesheet">
+<style>body{margin:0;background:#161917;font-family:Sora,'Noto Sans Devanagari','Noto Sans Kannada',sans-serif}a{color:#b6d34a}a:hover{opacity:.85}html{scroll-behavior:smooth}
+@media (max-width:640px){.bvc-steps{grid-template-columns:1fr !important}.bvc-mosaic{grid-template-columns:1fr 1fr !important}.bvc-h1{font-size:28px !important}.bvc-row{flex-direction:column;align-items:flex-start;gap:2px !important}}</style>
+</helmet>
+<div style="min-height:100vh;background:#161917;color:#eef1ec;font-family:Sora,'Noto Sans Devanagari','Noto Sans Kannada',sans-serif" data-screen-label="BVC home">
+  <div style="max-width:720px;margin:0 auto;padding:0 28px">
+    <div style="display:flex;justify-content:space-between;align-items:center;padding:22px 0;flex-wrap:wrap;gap:10px">
+      <div style="font-weight:700;font-size:15px;letter-spacing:-.3px">🏐 BVC</div>
+      <div style="display:flex;gap:20px;align-items:center;font-size:13px">
+        <a href="#games" style="color:#98a293;text-decoration:none">{{ t.navGames }}</a>
+        <a href="#how" style="color:#98a293;text-decoration:none">{{ t.navHow }}</a>
+        <a href="#about" style="color:#98a293;text-decoration:none">{{ t.navAbout }}</a>
+        <span style="display:flex;gap:4px;font-size:11.5px">
+          <button onClick="{{ setEn }}" style="{{ enPill }}">EN</button>
+          <button onClick="{{ setHi }}" style="{{ hiPill }}">हिंदी</button>
+          <button onClick="{{ setKn }}" style="{{ knPill }}">ಕನ್ನಡ</button>
+        </span>
+      </div>
+    </div>
+    <div style="padding:64px 0 20px;text-align:center">
+      <div style="width:68px;height:68px;border-radius:50%;background:#262c24;margin:0 auto;display:flex;align-items:center;justify-content:center;font-size:30px">🏐</div>
+      <h1 class="bvc-h1" style="font-size:36px;font-weight:700;margin:22px 0 0;letter-spacing:-.6px;line-height:1.2">{{ t.title }}</h1>
+      <p style="font-size:16px;color:#98a293;margin:12px auto 0;line-height:1.7;max-width:430px">{{ t.heroSub }}</p>
+      <a href="{{ waLink }}" style="display:inline-block;margin-top:28px;background:#b6d34a;color:#161916;text-decoration:none;font-weight:700;font-size:15px;padding:17px 34px;border-radius:12px">{{ t.cta }}</a>
+      <div style="font-size:12px;color:#6c7568;margin-top:12px">{{ t.ctaMicro }}</div>
+    </div>
+    <div id="games" style="padding:56px 0 0;scroll-margin-top:20px">
+      <div style="font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#6c7568">{{ t.gamesHead }}</div>
+      <div style="display:flex;flex-direction:column;gap:1px;background:#2d322b;border:1px solid #2d322b;border-radius:14px;overflow:hidden;margin-top:14px">
+        <div class="bvc-row" style="background:#20241f;padding:17px 20px;display:flex;justify-content:space-between;font-size:14px;gap:12px"><span><b>{{ t.d1 }}</b> 8–10 PM</span><span style="color:#98a293">{{ t.v1 }}</span></div>
+        <div class="bvc-row" style="background:#20241f;padding:17px 20px;display:flex;justify-content:space-between;font-size:14px;gap:12px"><span><b>{{ t.d2 }}</b> 1:30–4 PM</span><span style="color:#98a293">{{ t.v2 }}</span></div>
+        <div class="bvc-row" style="background:#20241f;padding:17px 20px;display:flex;justify-content:space-between;font-size:14px;gap:12px"><span><b>{{ t.d3 }}</b> 4–6 PM</span><span style="color:#98a293">{{ t.v3 }}</span></div>
+      </div>
+      <div style="font-size:12px;color:#6c7568;margin-top:10px">{{ t.gamesNote }}</div>
+      <div class="bvc-mosaic" style="display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:96px;gap:10px;margin-top:26px">
+        <div style="grid-column:span 2;grid-row:span 2;border-radius:14px;background:repeating-linear-gradient(45deg,#1e221d,#1e221d 8px,#232823 8px,#232823 16px);display:flex;align-items:center;justify-content:center;font:10px ui-monospace,monospace;color:#6c7568;position:relative;overflow:hidden"><span style="position:absolute;left:12px;top:12px;background:#b6d34a;color:#161916;font:600 10px Sora,sans-serif;padding:4px 9px;border-radius:99px">SUNDAY SAND</span>match-point photo</div>
+        <div style="grid-row:span 2;border-radius:14px;background:repeating-linear-gradient(45deg,#1e221d,#1e221d 8px,#232823 8px,#232823 16px);display:flex;align-items:center;justify-content:center;font:10px ui-monospace,monospace;color:#6c7568">tall action shot</div>
+        <div style="border-radius:14px;background:repeating-linear-gradient(45deg,#1e221d,#1e221d 8px,#232823 8px,#232823 16px);display:flex;align-items:center;justify-content:center;font:10px ui-monospace,monospace;color:#6c7568">serve photo</div>
+        <div style="border-radius:14px;background:#b6d34a;color:#161916;display:flex;flex-direction:column;justify-content:center;padding:0 16px"><div style="font-weight:700;font-size:20px;letter-spacing:-.5px">400+</div><div style="font-size:11px;font-weight:600;opacity:.75">{{ t.stat }}</div></div>
+        <div style="grid-column:span 2;border-radius:14px;background:repeating-linear-gradient(45deg,#1e221d,#1e221d 8px,#232823 8px,#232823 16px);display:flex;align-items:center;justify-content:center;font:10px ui-monospace,monospace;color:#6c7568">wide court photo — indoor evenings</div>
+        <div style="border-radius:14px;background:repeating-linear-gradient(45deg,#1e221d,#1e221d 8px,#232823 8px,#232823 16px);display:flex;align-items:center;justify-content:center;font:10px ui-monospace,monospace;color:#6c7568">huddle photo</div>
+        <div style="border-radius:14px;background:repeating-linear-gradient(45deg,#1e221d,#1e221d 8px,#232823 8px,#232823 16px);display:flex;align-items:center;justify-content:center;font:10px ui-monospace,monospace;color:#6c7568">chai after</div>
+      </div>
+      <div style="font-size:12px;color:#6c7568;margin-top:10px;text-align:right;font-style:italic">{{ t.photosCaption }}</div>
+    </div>
+    <div id="how" style="padding:56px 0 0;scroll-margin-top:20px">
+      <div style="font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#6c7568">{{ t.howHead }}</div>
+      <div class="bvc-steps" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-top:14px">
+        <div style="background:#20241f;border:1px solid #2d322b;border-radius:14px;padding:20px"><div style="font-weight:700;color:#b6d34a;font-size:13px">{{ t.s1tag }}</div><div style="font-weight:600;margin-top:8px;font-size:14.5px">{{ t.s1title }}</div><div style="font-size:13px;color:#98a293;margin-top:5px;line-height:1.6">{{ t.s1body }}</div></div>
+        <div style="background:#20241f;border:1px solid #2d322b;border-radius:14px;padding:20px"><div style="font-weight:700;color:#b6d34a;font-size:13px">{{ t.s2tag }}</div><div style="font-weight:600;margin-top:8px;font-size:14.5px">{{ t.s2title }}</div><div style="font-size:13px;color:#98a293;margin-top:5px;line-height:1.6">{{ t.s2body }}</div></div>
+        <div style="background:#20241f;border:1px solid #2d322b;border-radius:14px;padding:20px"><div style="font-weight:700;color:#b6d34a;font-size:13px">{{ t.s3tag }}</div><div style="font-weight:600;margin-top:8px;font-size:14.5px">{{ t.s3title }}</div><div style="font-size:13px;color:#98a293;margin-top:5px;line-height:1.6">{{ t.s3body }}</div></div>
+      </div>
+    </div>
+    <sc-if value="{{ showEvents }}" hint-placeholder-val="{{ false }}">
+      <div id="events" style="padding:56px 0 0;scroll-margin-top:20px">
+        <div style="font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#6c7568">{{ t.eventsHead }}</div>
+        <div style="margin-top:14px;background:#20241f;border:1px dashed #3d443a;border-radius:14px;padding:26px;text-align:center;font-size:14px;color:#98a293">{{ t.eventsBody }}</div>
+      </div>
+    </sc-if>
+    <div id="about" style="padding:56px 0 0;scroll-margin-top:20px">
+      <div style="font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#6c7568">{{ t.aboutHead }}</div>
+      <div style="margin-top:10px;font-size:14px;color:#c3cabe;line-height:1.9;max-width:560px">{{ t.aboutBody }}</div>
+    </div>
+    <div style="text-align:center;padding:60px 0 24px">
+      <div style="font-size:20px;font-weight:700">{{ t.outro }}</div>
+      <a href="{{ waLink }}" style="display:inline-block;margin-top:18px;background:#b6d34a;color:#161916;text-decoration:none;font-weight:700;font-size:14px;padding:14px 28px;border-radius:12px">{{ t.outroCta }}</a>
+    </div>
+    <div style="padding:20px 0 32px;border-top:1px solid #2d322b;margin-top:24px;font-size:12px;color:#6c7568;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px"><span>{{ t.footerLeft }}</span><span>English · हिंदी · ಕನ್ನಡ</span></div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;whatsappLink&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;https://chat.whatsapp.com/H5lOz8hjkAP4MQtuJui6GJ&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Links&quot;},&quot;showEvents&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Sections&quot;}}">
+class Component extends DCLogic {
+  state = { lang: "en" };
+  componentDidMount() {
+    try { const l = localStorage.getItem("bvc-lang"); if (l === "hi" || l === "kn" || l === "en") this.setState({ lang: l }); } catch (e) {}
+  }
+  setLang(l) { this.setState({ lang: l }); try { localStorage.setItem("bvc-lang", l); } catch (e) {} }
+  renderVals() {
+    const dict = {
+      en: {
+        navGames: "Games", navHow: "How it works", navAbout: "About",
+        title: "Bangalore Volleyball Club",
+        heroSub: "Weekly pick-up volleyball across the city. Volunteer-run, free to join, all levels welcome.",
+        cta: "Join the WhatsApp group", ctaMicro: "That's it. Everything else happens in the group.",
+        gamesHead: "Weekly games",
+        d1: "Tue & Thu", v1: "Indoor · Thanisandra", d2: "Saturday", v2: "Indoor · Yelahanka", d3: "Sunday", v3: "Beach · HSR Layout",
+        gamesNote: "Exact games are posted in the group every Monday — times can shift with venue availability.",
+        stat: "players & counting", photosCaption: "— moments from recent games",
+        howHead: "How it works",
+        s1tag: "STEP 1", s1title: "Join the group", s1body: "One tap — it's our whole clubhouse.",
+        s2tag: "STEP 2", s2title: "Get on the list", s2body: "Every game post has a player list. Pay the host to claim a spot — once you're on the updated list, you're in.",
+        s3tag: "STEP 3", s3title: "Show up & play", s3body: "We'll wave you onto a court in minutes.",
+        gtkHead: "Good to know",
+        gtkBody: "Your spot is confirmed when the host reposts the list with your name · paid but can't make it? Say so early so someone can take your place · rotate in fairly, winners stay two games · beginners get extra touches, not eye-rolls.",
+        eventsHead: "Events & tournaments",
+        eventsBody: "Nothing scheduled yet — tournaments and special events will show up here. Watch the group for announcements.",
+        aboutHead: "About",
+        aboutBody: "We're a volunteer-run community of 400+ players keeping volleyball alive across Bangalore since 2025. No club fees, no committees, no legal entity — just people who love the game, organizing courts and welcoming whoever shows up.",
+        outro: "See you at the net.", outroCta: "Join on WhatsApp",
+        footerLeft: "Bangalore Volleyball Club"
+      },
+      hi: {
+        navGames: "खेल", navHow: "कैसे काम करता है", navAbout: "हमारे बारे में",
+        title: "बैंगलोर वॉलीबॉल क्लब",
+        heroSub: "शहर भर में हर हफ़्ते पिक-अप वॉलीबॉल। स्वयंसेवकों द्वारा संचालित, जुड़ना मुफ़्त, सभी स्तरों का स्वागत है।",
+        cta: "WhatsApp ग्रुप से जुड़ें", ctaMicro: "बस इतना ही। बाक़ी सब ग्रुप में होता है।",
+        gamesHead: "साप्ताहिक खेल",
+        d1: "मंगल और गुरु", v1: "इनडोर · तनिसांद्रा", d2: "शनिवार", v2: "इनडोर · येलहंका", d3: "रविवार", v3: "बीच · HSR लेआउट",
+        gamesNote: "खेल हर सोमवार ग्रुप में पोस्ट होते हैं — वेन्यू के हिसाब से समय बदल सकता है।",
+        stat: "खिलाड़ी, और बढ़ रहे हैं", photosCaption: "— हाल के खेलों की झलकियाँ",
+        howHead: "कैसे काम करता है",
+        s1tag: "चरण 1", s1title: "ग्रुप से जुड़ें", s1body: "एक टैप — यही हमारा क्लबहाउस है।",
+        s2tag: "चरण 2", s2title: "लिस्ट में नाम लिखवाएँ", s2body: "हर गेम पोस्ट के साथ खिलाड़ियों की लिस्ट होती है। होस्ट को पेमेंट करें — अपडेटेड लिस्ट में नाम आते ही आपकी जगह पक्की।",
+        s3tag: "चरण 3", s3title: "आएँ और खेलें", s3body: "कुछ ही मिनटों में आपको कोर्ट पर बुला लेंगे।",
+        gtkHead: "जानने योग्य बातें",
+        gtkBody: "होस्ट के अपडेटेड लिस्ट में नाम आने पर ही जगह पक्की · पेमेंट के बाद नहीं आ सकते? जल्दी बताएँ ताकि कोई और खेल सके · बारी-बारी से खेलें, जीतने वाले ज़्यादा से ज़्यादा दो गेम · नए खिलाड़ियों को ज़्यादा मौके मिलते हैं, ताने नहीं।",
+        eventsHead: "इवेंट और टूर्नामेंट",
+        eventsBody: "अभी कुछ शेड्यूल नहीं है — टूर्नामेंट और खास इवेंट यहाँ दिखेंगे। घोषणाओं के लिए ग्रुप देखते रहें।",
+        aboutHead: "हमारे बारे में",
+        aboutBody: "हम 2025 से बैंगलोर भर में वॉलीबॉल को ज़िंदा रखने वाले 400+ खिलाड़ियों का स्वयंसेवी समुदाय हैं। कोई फ़ीस नहीं, कोई कमेटी नहीं, कोई संस्था नहीं — बस खेल से प्यार करने वाले लोग।",
+        outro: "कोर्ट पर मिलते हैं।", outroCta: "WhatsApp पर जुड़ें",
+        footerLeft: "बैंगलोर वॉलीबॉल क्लब"
+      },
+      kn: {
+        navGames: "ಆಟಗಳು", navHow: "ಹೇಗೆ ನಡೆಯುತ್ತದೆ", navAbout: "ನಮ್ಮ ಬಗ್ಗೆ",
+        title: "ಬೆಂಗಳೂರು ವಾಲಿಬಾಲ್ ಕ್ಲಬ್",
+        heroSub: "ನಗರದಾದ್ಯಂತ ಪ್ರತಿ ವಾರ ಪಿಕ್-ಅಪ್ ವಾಲಿಬಾಲ್. ಸ್ವಯಂಸೇವಕರಿಂದ ನಡೆಸಲ್ಪಡುತ್ತದೆ, ಸೇರಲು ಉಚಿತ, ಎಲ್ಲಾ ಹಂತದವರಿಗೂ ಸ್ವಾಗತ.",
+        cta: "WhatsApp ಗುಂಪಿಗೆ ಸೇರಿ", ctaMicro: "ಅಷ್ಟೇ. ಉಳಿದದ್ದೆಲ್ಲ ಗುಂಪಿನಲ್ಲಿ ನಡೆಯುತ್ತದೆ.",
+        gamesHead: "ವಾರದ ಆಟಗಳು",
+        d1: "ಮಂಗಳ ಮತ್ತು ಗುರು", v1: "ಒಳಾಂಗಣ · ತಣಿಸಂದ್ರ", d2: "ಶನಿವಾರ", v2: "ಒಳಾಂಗಣ · ಯಲಹಂಕ", d3: "ಭಾನುವಾರ", v3: "ಬೀಚ್ · HSR ಲೇಔಟ್",
+        gamesNote: "ಆಟಗಳು ಪ್ರತಿ ಸೋಮವಾರ ಗುಂಪಿನಲ್ಲಿ ಪೋಸ್ಟ್ ಆಗುತ್ತವೆ — ಸಮಯ ಬದಲಾಗಬಹುದು.",
+        stat: "ಆಟಗಾರರು, ಇನ್ನೂ ಹೆಚ್ಚುತ್ತಿದೆ", photosCaption: "— ಇತ್ತೀಚಿನ ಆಟಗಳ ಕ್ಷಣಗಳು",
+        howHead: "ಹೇಗೆ ನಡೆಯುತ್ತದೆ",
+        s1tag: "ಹಂತ 1", s1title: "ಗುಂಪಿಗೆ ಸೇರಿ", s1body: "ಒಂದು ಟ್ಯಾಪ್ — ಇದೇ ನಮ್ಮ ಕ್ಲಬ್‌ಹೌಸ್.",
+        s2tag: "ಹಂತ 2", s2title: "ಪಟ್ಟಿಗೆ ಸೇರಿ", s2body: "ಪ್ರತಿ ಗೇಮ್ ಪೋಸ್ಟ್‌ನಲ್ಲಿ ಆಟಗಾರರ ಪಟ್ಟಿ ಇರುತ್ತದೆ. ಹೋಸ್ಟ್‌ಗೆ ಪಾವತಿಸಿ — ಹೊಸ ಪಟ್ಟಿಯಲ್ಲಿ ನಿಮ್ಮ ಹೆಸರು ಬಂದರೆ ನಿಮ್ಮ ಸ್ಥಾನ ಖಚಿತ.",
+        s3tag: "ಹಂತ 3", s3title: "ಬಂದು ಆಡಿ", s3body: "ಕೆಲವೇ ನಿಮಿಷಗಳಲ್ಲಿ ನಿಮ್ಮನ್ನು ಕೋರ್ಟ್‌ಗೆ ಕರೆಯುತ್ತೇವೆ.",
+        gtkHead: "ತಿಳಿದಿರಲಿ",
+        gtkBody: "ಹೋಸ್ಟ್ ಹೊಸ ಪಟ್ಟಿ ಹಾಕಿದಾಗ ನಿಮ್ಮ ಸ್ಥಾನ ಖಚಿತ · ಪಾವತಿಸಿ ಬರಲಾಗದಿದ್ದರೆ ಬೇಗ ತಿಳಿಸಿ, ಬೇರೆಯವರು ಆಡಬಹುದು · ಸರದಿಯಂತೆ ಆಡಿ, ಗೆದ್ದವರು ಗರಿಷ್ಠ ಎರಡು ಗೇಮ್ · ಹೊಸಬರಿಗೆ ಹೆಚ್ಚು ಅವಕಾಶ, ಮೂದಲಿಕೆ ಇಲ್ಲ.",
+        eventsHead: "ಇವೆಂಟ್ ಮತ್ತು ಟೂರ್ನಮೆಂಟ್",
+        eventsBody: "ಸದ್ಯಕ್ಕೆ ಏನೂ ನಿಗದಿಯಾಗಿಲ್ಲ — ಟೂರ್ನಮೆಂಟ್‌ಗಳು ಇಲ್ಲಿ ಕಾಣಿಸುತ್ತವೆ. ಪ್ರಕಟಣೆಗಳಿಗೆ ಗುಂಪು ನೋಡಿ.",
+        aboutHead: "ನಮ್ಮ ಬಗ್ಗೆ",
+        aboutBody: "2025 ರಿಂದ ಬೆಂಗಳೂರಿನಾದ್ಯಂತ ವಾಲಿಬಾಲ್ ಅನ್ನು ಜೀವಂತವಾಗಿಡುತ್ತಿರುವ 400+ ಆಟಗಾರರ ಸ್ವಯಂಸೇವಕ ಸಮುದಾಯ ನಾವು. ಶುಲ್ಕವಿಲ್ಲ, ಸಮಿತಿಗಳಿಲ್ಲ — ಆಟವನ್ನು ಪ್ರೀತಿಸುವ ಜನ ಅಷ್ಟೇ.",
+        outro: "ನೆಟ್ ಬಳಿ ಸಿಗೋಣ.", outroCta: "WhatsApp ನಲ್ಲಿ ಸೇರಿ",
+        footerLeft: "ಬೆಂಗಳೂರು ವಾಲಿಬಾಲ್ ಕ್ಲಬ್"
+      }
+    };
+    const lang = this.state.lang;
+    const pill = (active) => ({
+      border: "1px solid " + (active ? "#b6d34a" : "#2d322b"),
+      background: active ? "#b6d34a" : "transparent",
+      color: active ? "#161916" : "#98a293",
+      borderRadius: "99px", padding: "3px 10px", fontSize: "11.5px",
+      fontFamily: "inherit", fontWeight: active ? 700 : 400, cursor: "pointer"
+    });
+    return {
+      t: dict[lang],
+      enPill: pill(lang === "en"), hiPill: pill(lang === "hi"), knPill: pill(lang === "kn"),
+      setEn: () => this.setLang("en"), setHi: () => this.setLang("hi"), setKn: () => this.setLang("kn"),
+      waLink: this.props.whatsappLink ?? "https://chat.whatsapp.com/",
+      showEvents: this.props.showEvents ?? false
+    };
+  }
+}
+</script>
+</body>
+</html>
