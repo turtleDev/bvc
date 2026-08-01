@@ -2,7 +2,50 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Bundled Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bangalore Volleyball Club</title>
+  <meta name="description" content="Weekly pick-up volleyball across Bangalore. Volunteer-run, free to join, all levels welcome.">
+  <link rel="canonical" href="https://volleyblr.in/">
+  <meta name="theme-color" content="#161917">
+
+  <!-- Link previews (WhatsApp, iMessage, Slack, Facebook). Crawlers never run
+       JS, so these must live in the static head — the bundler replaces
+       documentElement at runtime and this whole <head> goes with it. -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Bangalore Volleyball Club">
+  <meta property="og:title" content="Bangalore Volleyball Club">
+  <meta property="og:description" content="Weekly pick-up volleyball across Bangalore. Volunteer-run, free to join, all levels welcome.">
+  <meta property="og:url" content="https://volleyblr.in/">
+  <meta property="og:locale" content="en_IN">
+  <meta property="og:image" content="https://volleyblr.in/og.png">
+  <meta property="og:image:secure_url" content="https://volleyblr.in/og.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Bangalore Volleyball Club — weekly pick-up volleyball across the city">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Bangalore Volleyball Club">
+  <meta name="twitter:description" content="Weekly pick-up volleyball across Bangalore. Volunteer-run, free to join, all levels welcome.">
+  <meta name="twitter:image" content="https://volleyblr.in/og.png">
+
+  <script>
+    // The bundler swaps document.documentElement, which drops the <title>
+    // above and leaves the tab showing a bare URL. Window state survives that
+    // swap, so re-assert the title whenever the document changes.
+    (function () {
+      var TITLE = 'Bangalore Volleyball Club';
+      function apply() { if (document.title !== TITLE) document.title = TITLE; }
+      apply();
+      // childList on document alone catches the root swap; no subtree, so this
+      // does not fire on every render the app does afterwards.
+      new MutationObserver(apply).observe(document, { childList: true });
+    })();
+  </script>
+
+  <!-- Analytics. `defer` scripts are guaranteed to execute before
+       DOMContentLoaded, and the bundler only swaps documentElement after that,
+       so this runs before its <script> element is discarded with the head. -->
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="dead9a89-8ded-4d18-9e2c-b596b6237583"></script>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { background: #161917; display: flex; align-items: center; justify-content: center; min-height: 100vh; font-family: -apple-system, BlinkMacSystemFont, sans-serif; }
