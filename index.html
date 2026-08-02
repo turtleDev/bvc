@@ -173,7 +173,7 @@ html{scroll-behavior:smooth}
   border-radius:14px;padding:26px;text-align:center;font-size:14px;color:var(--muted)}
 
 /* about + outro + footer */
-.about-body{margin-top:10px;font-size:14px;color:#c3cabe;line-height:1.9;max-width:560px}
+.prose{margin-top:10px;font-size:14px;color:#c3cabe;line-height:1.9;max-width:560px}
 .outro{text-align:center;padding:60px 0 24px}
 .outro-line{font-size:20px;font-weight:700}
 .footer{padding:20px 0 32px;border-top:1px solid var(--line);margin-top:24px;font-size:12px;
@@ -256,6 +256,11 @@ html{scroll-behavior:smooth}
       </div>
     </section>
 
+    <section class="section" id="good-to-know">
+      <h2 class="eyebrow" data-i18n="gtkHead">Good to know</h2>
+      <div class="prose" data-i18n="gtkBody">Your spot is confirmed when the host reposts the list with your name · paid but can't make it? Say so early so someone can take your place · rotate in fairly · beginners get extra touches, not eye-rolls.</div>
+    </section>
+
     <!-- Events: delete the `hidden` attribute to show this section. -->
     <section class="section" id="events" hidden>
       <h2 class="eyebrow" data-i18n="eventsHead">Events &amp; tournaments</h2>
@@ -264,7 +269,7 @@ html{scroll-behavior:smooth}
 
     <section class="section" id="about">
       <h2 class="eyebrow" data-i18n="aboutHead">About</h2>
-      <div class="about-body" data-i18n="aboutBody">We're a volunteer-run community of 400+ players keeping volleyball alive across Bangalore since 2025. No club fees, no committees, no legal entity — just people who love the game, organizing courts and welcoming whoever shows up.</div>
+      <div class="prose" data-i18n="aboutBody">We're a volunteer-run community of 400+ players keeping volleyball alive across Bangalore since 2025. No club fees, no committees, no legal entity — just people who love the game, organizing courts and welcoming whoever shows up.</div>
     </section>
 
     <div class="outro">
@@ -300,7 +305,7 @@ html{scroll-behavior:smooth}
       s2tag: "चरण 2", s2title: "लिस्ट में नाम लिखवाएँ", s2body: "हर गेम पोस्ट के साथ खिलाड़ियों की लिस्ट होती है। होस्ट को पेमेंट करें — अपडेटेड लिस्ट में नाम आते ही आपकी जगह पक्की।",
       s3tag: "चरण 3", s3title: "आएँ और खेलें", s3body: "कुछ ही मिनटों में आपको कोर्ट पर बुला लेंगे।",
       gtkHead: "जानने योग्य बातें",
-      gtkBody: "होस्ट के अपडेटेड लिस्ट में नाम आने पर ही जगह पक्की · पेमेंट के बाद नहीं आ सकते? जल्दी बताएँ ताकि कोई और खेल सके · बारी-बारी से खेलें, जीतने वाले ज़्यादा से ज़्यादा दो गेम · नए खिलाड़ियों को ज़्यादा मौके मिलते हैं, ताने नहीं।",
+      gtkBody: "होस्ट के अपडेटेड लिस्ट में नाम आने पर ही जगह पक्की · पेमेंट के बाद नहीं आ सकते? जल्दी बताएँ ताकि कोई और खेल सके · बारी-बारी से खेलें · नए खिलाड़ियों को ज़्यादा मौके मिलते हैं, ताने नहीं।",
       eventsHead: "इवेंट और टूर्नामेंट",
       eventsBody: "अभी कुछ शेड्यूल नहीं है — टूर्नामेंट और खास इवेंट यहाँ दिखेंगे। घोषणाओं के लिए ग्रुप देखते रहें।",
       aboutHead: "हमारे बारे में",
@@ -322,7 +327,7 @@ html{scroll-behavior:smooth}
       s2tag: "ಹಂತ 2", s2title: "ಪಟ್ಟಿಗೆ ಸೇರಿ", s2body: "ಪ್ರತಿ ಗೇಮ್ ಪೋಸ್ಟ್‌ನಲ್ಲಿ ಆಟಗಾರರ ಪಟ್ಟಿ ಇರುತ್ತದೆ. ಹೋಸ್ಟ್‌ಗೆ ಪಾವತಿಸಿ — ಹೊಸ ಪಟ್ಟಿಯಲ್ಲಿ ನಿಮ್ಮ ಹೆಸರು ಬಂದರೆ ನಿಮ್ಮ ಸ್ಥಾನ ಖಚಿತ.",
       s3tag: "ಹಂತ 3", s3title: "ಬಂದು ಆಡಿ", s3body: "ಕೆಲವೇ ನಿಮಿಷಗಳಲ್ಲಿ ನಿಮ್ಮನ್ನು ಕೋರ್ಟ್‌ಗೆ ಕರೆಯುತ್ತೇವೆ.",
       gtkHead: "ತಿಳಿದಿರಲಿ",
-      gtkBody: "ಹೋಸ್ಟ್ ಹೊಸ ಪಟ್ಟಿ ಹಾಕಿದಾಗ ನಿಮ್ಮ ಸ್ಥಾನ ಖಚಿತ · ಪಾವತಿಸಿ ಬರಲಾಗದಿದ್ದರೆ ಬೇಗ ತಿಳಿಸಿ, ಬೇರೆಯವರು ಆಡಬಹುದು · ಸರದಿಯಂತೆ ಆಡಿ, ಗೆದ್ದವರು ಗರಿಷ್ಠ ಎರಡು ಗೇಮ್ · ಹೊಸಬರಿಗೆ ಹೆಚ್ಚು ಅವಕಾಶ, ಮೂದಲಿಕೆ ಇಲ್ಲ.",
+      gtkBody: "ಹೋಸ್ಟ್ ಹೊಸ ಪಟ್ಟಿ ಹಾಕಿದಾಗ ನಿಮ್ಮ ಸ್ಥಾನ ಖಚಿತ · ಪಾವತಿಸಿ ಬರಲಾಗದಿದ್ದರೆ ಬೇಗ ತಿಳಿಸಿ, ಬೇರೆಯವರು ಆಡಬಹುದು · ಸರದಿಯಂತೆ ಆಡಿ · ಹೊಸಬರಿಗೆ ಹೆಚ್ಚು ಅವಕಾಶ, ಮೂದಲಿಕೆ ಇಲ್ಲ.",
       eventsHead: "ಇವೆಂಟ್ ಮತ್ತು ಟೂರ್ನಮೆಂಟ್",
       eventsBody: "ಸದ್ಯಕ್ಕೆ ಏನೂ ನಿಗದಿಯಾಗಿಲ್ಲ — ಟೂರ್ನಮೆಂಟ್‌ಗಳು ಇಲ್ಲಿ ಕಾಣಿಸುತ್ತವೆ. ಪ್ರಕಟಣೆಗಳಿಗೆ ಗುಂಪು ನೋಡಿ.",
       aboutHead: "ನಮ್ಮ ಬಗ್ಗೆ",
