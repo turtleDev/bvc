@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>Bangalore Volleyball Club</title>
-<meta name="description" content="Weekly pick-up volleyball across Bangalore. Volunteer-run, free to join, all levels welcome.">
+<meta name="description" content="Weekly pick-up volleyball across Bangalore. Volunteer-run, all levels welcome — we just split the court cost.">
 <link rel="canonical" href="https://volleyblr.in/">
 <meta name="theme-color" content="#161917">
 
@@ -14,7 +14,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Bangalore Volleyball Club">
 <meta property="og:title" content="Bangalore Volleyball Club">
-<meta property="og:description" content="Weekly pick-up volleyball across Bangalore. Volunteer-run, free to join, all levels welcome.">
+<meta property="og:description" content="Weekly pick-up volleyball across Bangalore. Volunteer-run, all levels welcome — we just split the court cost.">
 <meta property="og:url" content="https://volleyblr.in/">
 <meta property="og:locale" content="en_IN">
 <meta property="og:image" content="https://volleyblr.in/og.png">
@@ -25,7 +25,7 @@
 <meta property="og:image:alt" content="Bangalore Volleyball Club — weekly pick-up volleyball across the city">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Bangalore Volleyball Club">
-<meta name="twitter:description" content="Weekly pick-up volleyball across Bangalore. Volunteer-run, free to join, all levels welcome.">
+<meta name="twitter:description" content="Weekly pick-up volleyball across Bangalore. Volunteer-run, all levels welcome — we just split the court cost.">
 <meta name="twitter:image" content="https://volleyblr.in/og.png">
 
 <link rel="icon" href="/favicon.ico" sizes="32x32">
@@ -44,7 +44,7 @@
   "url": "https://volleyblr.in/",
   "logo": "https://volleyblr.in/favicon.svg",
   "image": "https://volleyblr.in/og.png",
-  "description": "Weekly pick-up volleyball across Bangalore. Volunteer-run, free to join, all levels welcome.",
+  "description": "Weekly pick-up volleyball across Bangalore. Volunteer-run, all levels welcome — we just split the court cost.",
   "sport": "Volleyball",
   "foundingDate": "2025",
   "knowsLanguage": ["en", "hi", "kn"],
@@ -178,6 +178,8 @@ html{scroll-behavior:smooth}
 .outro-line{font-size:20px;font-weight:700}
 .footer{padding:20px 0 32px;border-top:1px solid var(--line);margin-top:24px;font-size:12px;
   color:var(--faint);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.footer-right{display:flex;gap:16px;flex-wrap:wrap}
+.footer a{color:var(--muted);text-decoration:underline;text-underline-offset:3px}
 
 @media (max-width:640px){
   .bvc-steps{grid-template-columns:1fr}
@@ -210,6 +212,7 @@ html{scroll-behavior:smooth}
       <a href="#games" data-i18n="navGames">Games</a>
       <a href="#how" data-i18n="navHow">How it works</a>
       <a href="#about" data-i18n="navAbout">About</a>
+      <a href="#safety" data-i18n="navSafety">Safety</a>
       <span class="langs">
         <button type="button" class="pill" data-lang="en" aria-pressed="true">EN</button>
         <button type="button" class="pill" data-lang="hi" aria-pressed="false" lang="hi">हिंदी</button>
@@ -223,7 +226,7 @@ html{scroll-behavior:smooth}
       <!-- Decorative: the club name follows in the h1. -->
       <svg class="hero-mark" aria-hidden="true" focusable="false"><use href="#ball"/></svg>
       <h1 class="bvc-h1" data-i18n="title">Bangalore Volleyball Club</h1>
-      <p class="hero-sub" data-i18n="heroSub">Weekly pick-up volleyball across the city. Volunteer-run, free to join, all levels welcome.</p>
+      <p class="hero-sub" data-i18n="heroSub">Weekly pick-up volleyball across the city. Volunteer-run, all levels welcome — we just split the court cost.</p>
       <a class="cta cta-lg" href="https://chat.whatsapp.com/H5lOz8hjkAP4MQtuJui6GJ" data-i18n="cta">Join the WhatsApp group</a>
       <div class="micro" data-i18n="ctaMicro">That's it. Everything else happens in the group.</div>
     </div>
@@ -260,7 +263,7 @@ html{scroll-behavior:smooth}
         <div class="step">
           <div class="step-tag" data-i18n="s2tag">STEP 2</div>
           <div class="step-title" data-i18n="s2title">Get on the list</div>
-          <div class="step-body" data-i18n="s2body">Every game post has a player list. Pay the host to claim a spot — once you're on the updated list, you're in.</div>
+          <div class="step-body" data-i18n="s2body">Every game post has a player list. Send the host your share of the court fee to claim a spot — once you're on the updated list, you're in.</div>
         </div>
         <div class="step">
           <div class="step-tag" data-i18n="s3tag">STEP 3</div>
@@ -272,7 +275,16 @@ html{scroll-behavior:smooth}
 
     <section class="section" id="good-to-know">
       <h2 class="eyebrow" data-i18n="gtkHead">Good to know</h2>
-      <div class="prose" data-i18n="gtkBody">Your spot is confirmed when the host reposts the list with your name · paid but can't make it? Say so early so someone can take your place · rotate in fairly · beginners get extra touches, not eye-rolls.</div>
+      <div class="prose" data-i18n="gtkBody">Your spot is confirmed when the host reposts the list with your name · paid but can't make it? Say so early so someone can take your place · rotate in fairly · beginners get extra touches, not eye-rolls · what you pay is your share of the court hire, nothing more — no one here makes money from this.</div>
+    </section>
+
+    <section class="section" id="safety">
+      <h2 class="eyebrow" data-i18n="safetyHead">Playing safe</h2>
+      <div class="prose" data-i18n="safetyBody">Volleyball can hurt you — sprains, knocks, the occasional broken finger. You play at your own risk · we're players who book courts, not coaches, referees or medics · 18 and over · don't play injured, unwell, or after a drink · carry your own health cover, we provide none · courts are hired, so their condition is the venue's business, not ours.</div>
+      <!-- data-i18n replaces textContent, so the link needs its own key or the
+           anchor is destroyed on language switch. See the <b>/<span> pattern in
+           the schedule rows above. -->
+      <div class="note"><a href="/terms.html" data-i18n="safetyLink">Read the full terms &amp; code of conduct →</a></div>
     </section>
 
     <!-- Events: delete the `hidden` attribute to show this section. -->
@@ -294,7 +306,10 @@ html{scroll-behavior:smooth}
 
   <footer class="footer">
     <span data-i18n="footerLeft">Bangalore Volleyball Club</span>
-    <span>English · हिंदी · ಕನ್ನಡ</span>
+    <span class="footer-right">
+      <a href="/terms.html" data-i18n="footerTerms">Terms &amp; safety</a>
+      <span>English · हिंदी · ಕನ್ನಡ</span>
+    </span>
   </footer>
 
 </div>
@@ -306,9 +321,9 @@ html{scroll-behavior:smooth}
 (function () {
   var DICT = {
     hi: {
-      navGames: "खेल", navHow: "कैसे काम करता है", navAbout: "हमारे बारे में",
+      navGames: "खेल", navHow: "कैसे काम करता है", navAbout: "हमारे बारे में", navSafety: "सुरक्षा",
       title: "बैंगलोर वॉलीबॉल क्लब",
-      heroSub: "शहर भर में हर हफ़्ते पिक-अप वॉलीबॉल। स्वयंसेवकों द्वारा संचालित, जुड़ना मुफ़्त, सभी स्तरों का स्वागत है।",
+      heroSub: "शहर भर में हर हफ़्ते पिक-अप वॉलीबॉल। स्वयंसेवकों द्वारा संचालित, सभी स्तरों का स्वागत — कोर्ट का खर्च आपस में बाँट लेते हैं।",
       cta: "WhatsApp ग्रुप से जुड़ें", ctaMicro: "बस इतना ही। बाक़ी सब ग्रुप में होता है।",
       gamesHead: "साप्ताहिक खेल",
       d1: "मंगल और गुरु", v1: "इनडोर · तनिसांद्रा", d2: "शनिवार", v2: "इनडोर · येलहंका", d3: "रविवार", v3: "बीच · HSR लेआउट",
@@ -316,21 +331,24 @@ html{scroll-behavior:smooth}
       stat: "खिलाड़ी, और बढ़ रहे हैं", photosCaption: "— हाल के खेलों की झलकियाँ",
       howHead: "कैसे काम करता है",
       s1tag: "चरण 1", s1title: "ग्रुप से जुड़ें", s1body: "एक टैप — यही हमारा क्लबहाउस है।",
-      s2tag: "चरण 2", s2title: "लिस्ट में नाम लिखवाएँ", s2body: "हर गेम पोस्ट के साथ खिलाड़ियों की लिस्ट होती है। होस्ट को पेमेंट करें — अपडेटेड लिस्ट में नाम आते ही आपकी जगह पक्की।",
+      s2tag: "चरण 2", s2title: "लिस्ट में नाम लिखवाएँ", s2body: "हर गेम पोस्ट के साथ खिलाड़ियों की लिस्ट होती है। कोर्ट फ़ीस में अपना हिस्सा होस्ट को भेजें — अपडेटेड लिस्ट में नाम आते ही आपकी जगह पक्की।",
       s3tag: "चरण 3", s3title: "आएँ और खेलें", s3body: "कुछ ही मिनटों में आपको कोर्ट पर बुला लेंगे।",
       gtkHead: "जानने योग्य बातें",
-      gtkBody: "होस्ट के अपडेटेड लिस्ट में नाम आने पर ही जगह पक्की · पेमेंट के बाद नहीं आ सकते? जल्दी बताएँ ताकि कोई और खेल सके · बारी-बारी से खेलें · नए खिलाड़ियों को ज़्यादा मौके मिलते हैं, ताने नहीं।",
+      gtkBody: "होस्ट के अपडेटेड लिस्ट में नाम आने पर ही जगह पक्की · पेमेंट के बाद नहीं आ सकते? जल्दी बताएँ ताकि कोई और खेल सके · बारी-बारी से खेलें · नए खिलाड़ियों को ज़्यादा मौके मिलते हैं, ताने नहीं · आप जो देते हैं वह कोर्ट के किराए में आपका हिस्सा है, उससे ज़्यादा कुछ नहीं — इससे किसी की कमाई नहीं होती।",
+      safetyHead: "सुरक्षित खेलें",
+      safetyBody: "वॉलीबॉल में चोट लग सकती है — मोच, टक्कर, कभी उँगली भी टूट सकती है। आप अपने जोखिम पर खेलते हैं · हम कोर्ट बुक करने वाले खिलाड़ी हैं, कोच, रेफरी या डॉक्टर नहीं · 18 साल से ऊपर · चोटिल, बीमार या शराब पीकर न खेलें · अपना हेल्थ कवर खुद रखें, हम कोई नहीं देते · कोर्ट किराए के हैं, उनकी हालत वेन्यू की ज़िम्मेदारी है, हमारी नहीं।",
+      safetyLink: "पूरी शर्तें और आचार संहिता पढ़ें →",
       eventsHead: "इवेंट और टूर्नामेंट",
       eventsBody: "अभी कुछ शेड्यूल नहीं है — टूर्नामेंट और खास इवेंट यहाँ दिखेंगे। घोषणाओं के लिए ग्रुप देखते रहें।",
       aboutHead: "हमारे बारे में",
       aboutBody: "हम 2025 से बैंगलोर भर में वॉलीबॉल को ज़िंदा रखने वाले 400+ खिलाड़ियों का स्वयंसेवी समुदाय हैं। कोई फ़ीस नहीं, कोई कमेटी नहीं, कोई संस्था नहीं — बस खेल से प्यार करने वाले लोग।",
       outro: "कोर्ट पर मिलते हैं।", outroCta: "WhatsApp पर जुड़ें",
-      footerLeft: "बैंगलोर वॉलीबॉल क्लब"
+      footerLeft: "बैंगलोर वॉलीबॉल क्लब", footerTerms: "शर्तें और सुरक्षा"
     },
     kn: {
-      navGames: "ಆಟಗಳು", navHow: "ಹೇಗೆ ನಡೆಯುತ್ತದೆ", navAbout: "ನಮ್ಮ ಬಗ್ಗೆ",
+      navGames: "ಆಟಗಳು", navHow: "ಹೇಗೆ ನಡೆಯುತ್ತದೆ", navAbout: "ನಮ್ಮ ಬಗ್ಗೆ", navSafety: "ಸುರಕ್ಷತೆ",
       title: "ಬೆಂಗಳೂರು ವಾಲಿಬಾಲ್ ಕ್ಲಬ್",
-      heroSub: "ನಗರದಾದ್ಯಂತ ಪ್ರತಿ ವಾರ ಪಿಕ್-ಅಪ್ ವಾಲಿಬಾಲ್. ಸ್ವಯಂಸೇವಕರಿಂದ ನಡೆಸಲ್ಪಡುತ್ತದೆ, ಸೇರಲು ಉಚಿತ, ಎಲ್ಲಾ ಹಂತದವರಿಗೂ ಸ್ವಾಗತ.",
+      heroSub: "ನಗರದಾದ್ಯಂತ ಪ್ರತಿ ವಾರ ಪಿಕ್-ಅಪ್ ವಾಲಿಬಾಲ್. ಸ್ವಯಂಸೇವಕರಿಂದ ನಡೆಸಲ್ಪಡುತ್ತದೆ, ಎಲ್ಲಾ ಹಂತದವರಿಗೂ ಸ್ವಾಗತ — ಕೋರ್ಟ್ ವೆಚ್ಚವನ್ನು ಹಂಚಿಕೊಳ್ಳುತ್ತೇವೆ.",
       cta: "WhatsApp ಗುಂಪಿಗೆ ಸೇರಿ", ctaMicro: "ಅಷ್ಟೇ. ಉಳಿದದ್ದೆಲ್ಲ ಗುಂಪಿನಲ್ಲಿ ನಡೆಯುತ್ತದೆ.",
       gamesHead: "ವಾರದ ಆಟಗಳು",
       d1: "ಮಂಗಳ ಮತ್ತು ಗುರು", v1: "ಒಳಾಂಗಣ · ತಣಿಸಂದ್ರ", d2: "ಶನಿವಾರ", v2: "ಒಳಾಂಗಣ · ಯಲಹಂಕ", d3: "ಭಾನುವಾರ", v3: "ಬೀಚ್ · HSR ಲೇಔಟ್",
@@ -338,16 +356,19 @@ html{scroll-behavior:smooth}
       stat: "ಆಟಗಾರರು, ಇನ್ನೂ ಹೆಚ್ಚುತ್ತಿದೆ", photosCaption: "— ಇತ್ತೀಚಿನ ಆಟಗಳ ಕ್ಷಣಗಳು",
       howHead: "ಹೇಗೆ ನಡೆಯುತ್ತದೆ",
       s1tag: "ಹಂತ 1", s1title: "ಗುಂಪಿಗೆ ಸೇರಿ", s1body: "ಒಂದು ಟ್ಯಾಪ್ — ಇದೇ ನಮ್ಮ ಕ್ಲಬ್‌ಹೌಸ್.",
-      s2tag: "ಹಂತ 2", s2title: "ಪಟ್ಟಿಗೆ ಸೇರಿ", s2body: "ಪ್ರತಿ ಗೇಮ್ ಪೋಸ್ಟ್‌ನಲ್ಲಿ ಆಟಗಾರರ ಪಟ್ಟಿ ಇರುತ್ತದೆ. ಹೋಸ್ಟ್‌ಗೆ ಪಾವತಿಸಿ — ಹೊಸ ಪಟ್ಟಿಯಲ್ಲಿ ನಿಮ್ಮ ಹೆಸರು ಬಂದರೆ ನಿಮ್ಮ ಸ್ಥಾನ ಖಚಿತ.",
+      s2tag: "ಹಂತ 2", s2title: "ಪಟ್ಟಿಗೆ ಸೇರಿ", s2body: "ಪ್ರತಿ ಗೇಮ್ ಪೋಸ್ಟ್‌ನಲ್ಲಿ ಆಟಗಾರರ ಪಟ್ಟಿ ಇರುತ್ತದೆ. ಕೋರ್ಟ್ ಶುಲ್ಕದಲ್ಲಿ ನಿಮ್ಮ ಪಾಲನ್ನು ಹೋಸ್ಟ್‌ಗೆ ಕಳುಹಿಸಿ — ಹೊಸ ಪಟ್ಟಿಯಲ್ಲಿ ನಿಮ್ಮ ಹೆಸರು ಬಂದರೆ ನಿಮ್ಮ ಸ್ಥಾನ ಖಚಿತ.",
       s3tag: "ಹಂತ 3", s3title: "ಬಂದು ಆಡಿ", s3body: "ಕೆಲವೇ ನಿಮಿಷಗಳಲ್ಲಿ ನಿಮ್ಮನ್ನು ಕೋರ್ಟ್‌ಗೆ ಕರೆಯುತ್ತೇವೆ.",
       gtkHead: "ತಿಳಿದಿರಲಿ",
-      gtkBody: "ಹೋಸ್ಟ್ ಹೊಸ ಪಟ್ಟಿ ಹಾಕಿದಾಗ ನಿಮ್ಮ ಸ್ಥಾನ ಖಚಿತ · ಪಾವತಿಸಿ ಬರಲಾಗದಿದ್ದರೆ ಬೇಗ ತಿಳಿಸಿ, ಬೇರೆಯವರು ಆಡಬಹುದು · ಸರದಿಯಂತೆ ಆಡಿ · ಹೊಸಬರಿಗೆ ಹೆಚ್ಚು ಅವಕಾಶ, ಮೂದಲಿಕೆ ಇಲ್ಲ.",
+      gtkBody: "ಹೋಸ್ಟ್ ಹೊಸ ಪಟ್ಟಿ ಹಾಕಿದಾಗ ನಿಮ್ಮ ಸ್ಥಾನ ಖಚಿತ · ಪಾವತಿಸಿ ಬರಲಾಗದಿದ್ದರೆ ಬೇಗ ತಿಳಿಸಿ, ಬೇರೆಯವರು ಆಡಬಹುದು · ಸರದಿಯಂತೆ ಆಡಿ · ಹೊಸಬರಿಗೆ ಹೆಚ್ಚು ಅವಕಾಶ, ಮೂದಲಿಕೆ ಇಲ್ಲ · ನೀವು ಪಾವತಿಸುವುದು ಕೋರ್ಟ್ ಬಾಡಿಗೆಯಲ್ಲಿ ನಿಮ್ಮ ಪಾಲು ಮಾತ್ರ — ಇದರಿಂದ ಯಾರಿಗೂ ಲಾಭವಿಲ್ಲ.",
+      safetyHead: "ಸುರಕ್ಷಿತವಾಗಿ ಆಡಿ",
+      safetyBody: "ವಾಲಿಬಾಲ್‌ನಲ್ಲಿ ಗಾಯವಾಗಬಹುದು — ಉಳುಕು, ಡಿಕ್ಕಿ, ಕೆಲವೊಮ್ಮೆ ಬೆರಳು ಮುರಿಯಬಹುದು. ನೀವು ನಿಮ್ಮ ಸ್ವಂತ ಜವಾಬ್ದಾರಿಯಲ್ಲಿ ಆಡುತ್ತೀರಿ · ನಾವು ಕೋರ್ಟ್ ಬುಕ್ ಮಾಡುವ ಆಟಗಾರರು, ಕೋಚ್, ರೆಫರಿ ಅಥವಾ ವೈದ್ಯರಲ್ಲ · 18 ವರ್ಷ ಮೇಲ್ಪಟ್ಟವರು ಮಾತ್ರ · ಗಾಯಗೊಂಡಿದ್ದರೆ, ಅಸ್ವಸ್ಥರಾಗಿದ್ದರೆ ಅಥವಾ ಮದ್ಯ ಸೇವಿಸಿದ್ದರೆ ಆಡಬೇಡಿ · ನಿಮ್ಮ ಆರೋಗ್ಯ ವಿಮೆ ನೀವೇ ಇಟ್ಟುಕೊಳ್ಳಿ, ನಾವು ಒದಗಿಸುವುದಿಲ್ಲ · ಕೋರ್ಟ್‌ಗಳು ಬಾಡಿಗೆಯವು, ಅವುಗಳ ಸ್ಥಿತಿ ವೆನ್ಯೂನ ಜವಾಬ್ದಾರಿ, ನಮ್ಮದಲ್ಲ.",
+      safetyLink: "ಪೂರ್ಣ ನಿಯಮಗಳು ಮತ್ತು ನಡವಳಿಕೆ ಸಂಹಿತೆ ಓದಿ →",
       eventsHead: "ಇವೆಂಟ್ ಮತ್ತು ಟೂರ್ನಮೆಂಟ್",
       eventsBody: "ಸದ್ಯಕ್ಕೆ ಏನೂ ನಿಗದಿಯಾಗಿಲ್ಲ — ಟೂರ್ನಮೆಂಟ್‌ಗಳು ಇಲ್ಲಿ ಕಾಣಿಸುತ್ತವೆ. ಪ್ರಕಟಣೆಗಳಿಗೆ ಗುಂಪು ನೋಡಿ.",
       aboutHead: "ನಮ್ಮ ಬಗ್ಗೆ",
-      aboutBody: "2025 ರಿಂದ ಬೆಂಗಳೂರಿನಾದ್ಯಂತ ವಾಲಿಬಾಲ್ ಅನ್ನು ಜೀವಂತವಾಗಿಡುತ್ತಿರುವ 400+ ಆಟಗಾರರ ಸ್ವಯಂಸೇವಕ ಸಮುದಾಯ ನಾವು. ಶುಲ್ಕವಿಲ್ಲ, ಸಮಿತಿಗಳಿಲ್ಲ — ಆಟವನ್ನು ಪ್ರೀತಿಸುವ ಜನ ಅಷ್ಟೇ.",
+      aboutBody: "2025 ರಿಂದ ಬೆಂಗಳೂರಿನಾದ್ಯಂತ ವಾಲಿಬಾಲ್ ಅನ್ನು ಜೀವಂತವಾಗಿಡುತ್ತಿರುವ 400+ ಆಟಗಾರರ ಸ್ವಯಂಸೇವಕ ಸಮುದಾಯ ನಾವು. ಕ್ಲಬ್ ಶುಲ್ಕವಿಲ್ಲ, ಸಮಿತಿಗಳಿಲ್ಲ, ಕಾನೂನುಬದ್ಧ ಸಂಸ್ಥೆಯಲ್ಲ — ಆಟವನ್ನು ಪ್ರೀತಿಸುವ, ಕೋರ್ಟ್ ಏರ್ಪಡಿಸುವ ಜನ ಅಷ್ಟೇ.",
       outro: "ನೆಟ್ ಬಳಿ ಸಿಗೋಣ.", outroCta: "WhatsApp ನಲ್ಲಿ ಸೇರಿ",
-      footerLeft: "ಬೆಂಗಳೂರು ವಾಲಿಬಾಲ್ ಕ್ಲಬ್"
+      footerLeft: "ಬೆಂಗಳೂರು ವಾಲಿಬಾಲ್ ಕ್ಲಬ್", footerTerms: "ನಿಯಮಗಳು ಮತ್ತು ಸುರಕ್ಷತೆ"
     }
   };
 
