@@ -7,6 +7,13 @@ The point of all this: **if something goes badly wrong, what protects you is
 having behaved reasonably and being able to show it.** Documents help. Records
 help more.
 
+**Start from this: you host in your own name.** There is no entity standing
+behind you. The session you post is yours — your venue, your player list, your
+cost per head, your call on refunds and on who sits out — and
+[the terms](../terms.html) say exactly that. Being an admin of the group is not
+hosting; only being named as the host of a session is. So name yourself in every
+game post, and never post a game as though "the club" is running it.
+
 ---
 
 ## Before the session
@@ -22,6 +29,11 @@ help more.
 
 Two minutes, every time. Do it before anyone starts warming up.
 
+This is a player's look-over, not a safety inspection — you aren't qualified to
+certify a court and the terms don't claim you are. Do it anyway: it's how you
+catch the obvious stuff, and noticing the obvious stuff is the one safety thing
+players are told to expect from you.
+
 - [ ] **Surface** — wet patches, sand over concrete, cracks, potholes, loose tiles.
 - [ ] **Debris** — glass, stones, screws, anything sharp.
 - [ ] **Net and posts** — posts stable and padded, guy ropes not a trip hazard,
@@ -35,6 +47,11 @@ Two minutes, every time. Do it before anyone starts warming up.
 **If something is unsafe: report it to the venue and don't play on it. Do not fix
 or modify venue equipment yourself** — repairing it makes its condition your
 responsibility instead of theirs.
+
+The same applies mid-session. If an obvious serious hazard turns up once you've
+started — glass on the sand, a post that's come loose, lights failing — stop
+play and tell the venue. Playing on because the court's paid for is the decision
+that's hard to defend later.
 
 ## During play
 
@@ -94,7 +111,12 @@ than searched for in a panic.
 Keep it visibly at-cost — that's what stops "splitting the court" from looking
 like running a business.
 
-- Collect **only** each player's share of that session's court fee.
+- Collect **only** each player's share of that session's court fee. It's a
+  pass-through: the venue's money passing through your account. No commission,
+  no rounding up, no profit.
+- **Say what your refund position is when you post.** It's your booking, so it's
+  your call — but players should hear it before they pay, not after they drop
+  out.
 - **Keep the venue receipt** for every session.
 - **Run no surplus.** If you over-collect, refund it or carry it visibly against
   the next booking. A growing balance in a personal account is the thing that
