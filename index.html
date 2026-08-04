@@ -99,6 +99,9 @@
 <style>
 :root{
   --bg:#161917; --ink:#eef1ec; --muted:#98a293; --faint:#6c7568;
+  /* --bg at 82%, for the sticky bar. Keep the channels in sync with --bg. */
+  --bg-blur:rgba(22,25,23,.82);
+  --bar-h:56px;
   --lime:#b6d34a; --on-lime:#161916;
   --surface:#20241f; --line:#2d322b; --tile-a:#1e221d; --tile-b:#232823;
   --font:Sora,'Noto Sans Devanagari','Noto Sans Kannada',sans-serif;
@@ -113,7 +116,17 @@ html{scroll-behavior:smooth}
 .wrap{max-width:720px;margin:0 auto;padding:0 28px}
 
 /* header + language pills */
-.topbar{display:flex;justify-content:space-between;align-items:center;padding:22px 0;flex-wrap:wrap;gap:10px 20px}
+/* The shell spans the viewport so the blur reaches the edges; the .wrap inside
+   it keeps the bar's contents on the same column as the rest of the page. */
+.topbar-shell{position:sticky;top:0;z-index:10;background:var(--bg-blur);
+  -webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line)}
+/* Without backdrop-filter the bar would be merely see-through, and the content
+   scrolling beneath would read straight through it. Go opaque instead. */
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
+  .topbar-shell{background:var(--bg)}
+}
+.topbar{display:flex;justify-content:space-between;align-items:center;padding:16px 0 14px;flex-wrap:wrap;gap:10px 20px}
 .brand{font-weight:700;font-size:15px;letter-spacing:-.3px;display:flex;align-items:center;gap:7px}
 .brand-mark{width:18px;height:18px;display:block}
 /* The pills sit before the nav in source order so the narrow layout below —
@@ -127,7 +140,7 @@ html{scroll-behavior:smooth}
 .pill[aria-pressed="true"]{border-color:var(--lime);background:var(--lime);color:var(--on-lime);font-weight:700}
 
 /* hero */
-.hero{padding:64px 0 20px;text-align:center}
+.hero{padding:52px 0 20px;text-align:center}
 .hero-mark{width:72px;height:72px;display:block;margin:0 auto}
 .bvc-h1{font-size:36px;font-weight:700;margin:22px 0 0;letter-spacing:-.6px;line-height:1.2}
 .hero-sub{font-size:16px;color:var(--muted);margin:12px auto 0;line-height:1.7;max-width:430px}
@@ -138,7 +151,11 @@ html{scroll-behavior:smooth}
 .micro{font-size:12px;color:var(--faint);margin-top:12px}
 
 /* sections */
-.section{padding:56px 0 0;scroll-margin-top:20px}
+/* A section's first 56px is padding, so landing its box 36px under the bar
+   still leaves the heading 20px clear of it — the same gap the page had before
+   the bar was sticky. --bar-h is measured by script; the values below are the
+   no-JS fallback, taken from the one-line and wrapped-nav layouts. */
+.section{padding:56px 0 0;scroll-margin-top:calc(var(--bar-h) - 36px)}
 .eyebrow{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--faint);margin:0}
 .note{font-size:12px;color:var(--faint);margin-top:10px}
 
@@ -185,6 +202,7 @@ html{scroll-behavior:smooth}
 .footer a{color:var(--muted);text-decoration:underline;text-underline-offset:3px}
 
 @media (max-width:640px){
+  :root{--bar-h:86px}
   /* Four links plus the pills is tight below ~360px; the shorter gap keeps
      them on one line, and wrapping catches the languages that still overrun. */
   .nav{order:4;width:100%;margin-left:0;column-gap:14px}
@@ -192,6 +210,12 @@ html{scroll-behavior:smooth}
   .bvc-mosaic{grid-template-columns:1fr 1fr}
   .bvc-h1{font-size:28px}
   .bvc-row{flex-direction:column;align-items:flex-start;gap:2px}
+}
+
+@media (max-width:340px){
+  /* The links need a second line here, and Kannada's are the tallest of the
+     three. Only matters without script; measureBar() supersedes it. */
+  :root{--bar-h:112px}
 }
 </style>
 </head>
@@ -210,22 +234,26 @@ html{scroll-behavior:smooth}
   </symbol>
 </svg>
 
-<div class="wrap">
+<div class="topbar-shell">
+  <div class="wrap">
+    <header class="topbar">
+      <div class="brand"><svg class="brand-mark" aria-hidden="true" focusable="false"><use href="#ball"/></svg>BVC</div>
+      <span class="langs">
+        <button type="button" class="pill" data-lang="en" aria-pressed="true">EN</button>
+        <button type="button" class="pill" data-lang="hi" aria-pressed="false" lang="hi">हिंदी</button>
+        <button type="button" class="pill" data-lang="kn" aria-pressed="false" lang="kn">ಕನ್ನಡ</button>
+      </span>
+      <nav class="nav">
+        <a href="#games" data-i18n="navGames">Games</a>
+        <a href="#how" data-i18n="navHow">How it works</a>
+        <a href="#about" data-i18n="navAbout">About</a>
+        <a href="#safety" data-i18n="navSafety">Safety</a>
+      </nav>
+    </header>
+  </div>
+</div>
 
-  <header class="topbar">
-    <div class="brand"><svg class="brand-mark" aria-hidden="true" focusable="false"><use href="#ball"/></svg>BVC</div>
-    <span class="langs">
-      <button type="button" class="pill" data-lang="en" aria-pressed="true">EN</button>
-      <button type="button" class="pill" data-lang="hi" aria-pressed="false" lang="hi">हिंदी</button>
-      <button type="button" class="pill" data-lang="kn" aria-pressed="false" lang="kn">ಕನ್ನಡ</button>
-    </span>
-    <nav class="nav">
-      <a href="#games" data-i18n="navGames">Games</a>
-      <a href="#how" data-i18n="navHow">How it works</a>
-      <a href="#about" data-i18n="navAbout">About</a>
-      <a href="#safety" data-i18n="navSafety">Safety</a>
-    </nav>
-  </header>
+<div class="wrap">
 
   <main>
     <div class="hero">
@@ -392,6 +420,15 @@ html{scroll-behavior:smooth}
   DICT.en = {};
   nodes.forEach(function (el) { DICT.en[el.getAttribute('data-i18n')] = el.textContent; });
 
+  // Anchor links have to land clear of the sticky bar, and the bar's height is
+  // not a constant: the nav wraps to a second line on narrow screens, and the
+  // Kannada and Hindi labels wrap at widths the English ones don't. Measure it
+  // instead of guessing — the CSS carries a fallback for when this never runs.
+  var shell = document.querySelector('.topbar-shell');
+  function measureBar() {
+    document.documentElement.style.setProperty('--bar-h', shell.offsetHeight + 'px');
+  }
+
   function apply(lang) {
     var d = DICT[lang] || DICT.en;
     nodes.forEach(function (el) {
@@ -402,6 +439,7 @@ html{scroll-behavior:smooth}
     pills.forEach(function (p) {
       p.setAttribute('aria-pressed', String(p.getAttribute('data-lang') === lang));
     });
+    measureBar();
   }
 
   pills.forEach(function (p) {
@@ -416,6 +454,11 @@ html{scroll-behavior:smooth}
     var saved = localStorage.getItem('bvc-lang');
     if (saved === 'hi' || saved === 'kn') apply(saved);
   } catch (e) {}
+
+  measureBar();
+  window.addEventListener('resize', measureBar);
+  // Webfonts land after first paint and change how the labels wrap.
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(measureBar);
 })();
 </script>
 </body>
