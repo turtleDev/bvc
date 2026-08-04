@@ -113,12 +113,15 @@ html{scroll-behavior:smooth}
 .wrap{max-width:720px;margin:0 auto;padding:0 28px}
 
 /* header + language pills */
-.topbar{display:flex;justify-content:space-between;align-items:center;padding:22px 0;flex-wrap:wrap;gap:10px}
+.topbar{display:flex;justify-content:space-between;align-items:center;padding:22px 0;flex-wrap:wrap;gap:10px 20px}
 .brand{font-weight:700;font-size:15px;letter-spacing:-.3px;display:flex;align-items:center;gap:7px}
 .brand-mark{width:18px;height:18px;display:block}
-.nav{display:flex;gap:20px;align-items:center;font-size:13px}
-.nav a{color:var(--muted);text-decoration:none}
-.langs{display:flex;gap:4px;font-size:11.5px}
+/* The pills sit before the nav in source order so the narrow layout below —
+   where they lead the header — reads the same to a screen reader as it looks.
+   Wide screens put them back on the right with order. */
+.nav{display:flex;gap:20px;align-items:center;font-size:13px;order:2;margin-left:auto}
+.nav a{color:var(--muted);text-decoration:none;white-space:nowrap}
+.langs{display:flex;gap:4px;font-size:11.5px;order:3}
 .pill{border:1px solid var(--line);background:transparent;color:var(--muted);
   border-radius:99px;padding:3px 10px;font-size:11.5px;font-family:inherit;font-weight:400;cursor:pointer}
 .pill[aria-pressed="true"]{border-color:var(--lime);background:var(--lime);color:var(--on-lime);font-weight:700}
@@ -182,6 +185,7 @@ html{scroll-behavior:smooth}
 .footer a{color:var(--muted);text-decoration:underline;text-underline-offset:3px}
 
 @media (max-width:640px){
+  .nav{order:4;width:100%;margin-left:0}
   .bvc-steps{grid-template-columns:1fr}
   .bvc-mosaic{grid-template-columns:1fr 1fr}
   .bvc-h1{font-size:28px}
@@ -208,15 +212,15 @@ html{scroll-behavior:smooth}
 
   <header class="topbar">
     <div class="brand"><svg class="brand-mark" aria-hidden="true" focusable="false"><use href="#ball"/></svg>BVC</div>
+    <span class="langs">
+      <button type="button" class="pill" data-lang="en" aria-pressed="true">EN</button>
+      <button type="button" class="pill" data-lang="hi" aria-pressed="false" lang="hi">हिंदी</button>
+      <button type="button" class="pill" data-lang="kn" aria-pressed="false" lang="kn">ಕನ್ನಡ</button>
+    </span>
     <nav class="nav">
       <a href="#games" data-i18n="navGames">Games</a>
       <a href="#how" data-i18n="navHow">How it works</a>
       <a href="#about" data-i18n="navAbout">About</a>
-      <span class="langs">
-        <button type="button" class="pill" data-lang="en" aria-pressed="true">EN</button>
-        <button type="button" class="pill" data-lang="hi" aria-pressed="false" lang="hi">हिंदी</button>
-        <button type="button" class="pill" data-lang="kn" aria-pressed="false" lang="kn">ಕನ್ನಡ</button>
-      </span>
     </nav>
   </header>
 
